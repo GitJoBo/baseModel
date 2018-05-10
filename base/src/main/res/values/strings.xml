@@ -1,0 +1,7 @@
+<resources>
+
+
+    <string name="login_date_relogin">登录过期，请重新登录</string>
+    <string name="title_null"></string>
+    <string name="cancel">取消</string>
+</resources>

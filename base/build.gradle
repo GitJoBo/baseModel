@@ -1,0 +1,79 @@
+
+apply plugin: 'com.android.library'
+//apply plugin: 'android-apt'
+//添加插件
+//apply plugin: 'me.tatarka.retrolambda'
+def cfg = rootProject.ext.configuration
+boolean isDebug=true;
+android {
+    compileSdkVersion cfg.compileSdkVersion
+//    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        jackOptions {
+//            enabled true
+//        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //aar
+//    repositories {
+//        flatDir {
+//            dirs 'libs'
+//        }
+//    }
+
+    //打jar包
+    // Copy类型
+//    task makeJar(type: Jar) {
+//        archiveName = 'base-jobo.jar' //最终jar包的名称
+//        from(project.zipTree('build/intermediates/bundles/release/classes.jar')) //需要打的juhepaysdk的编译文件
+//        from(project.zipTree('build/intermediates/bundles/release/libs/banksdk.jar')) //需要打的juhepaysdk所以来的jar包
+//        from(project.zipTree('build/intermediates/bundles/release/libs/libammsdk.jar')) //需要打的juhepaysdk所以来的jar包
+//        destinationDir = file('build/libs') //jar包输出路径
+//    }
+//    makeJar.dependsOn(build) //必须写的配置
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.android.support:multidex:+'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation project(':model')
+    implementation project(':recycler')
+
+//    compile (name:'base-debug', ext:'aar')
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+//    dependencies {
+//        classpath 'me.tatarka:gradle-retrolambda:3.3.1'
+//    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}

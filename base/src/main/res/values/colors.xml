@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="theme">#F16240</color>
+    <color name="text">#6b6b68</color>
+    <color name="text1">#fce2d0</color>
+    <color name="F6f5">#F6F5F5</color>
+    <color name="F5F5">#F5F5F5</color>
+    <color name="FaFaFa">#FaFaFa</color>
+    <color name="bg"> #f2f2f2</color>
+    <color name="f06440"> #f06440</color>
+    <color name="f16240"> #f16240</color>
+    <color name="f0f0f0"> #f0f0f0</color>
+    <color name="black"> #000000</color>
+    <color name="black_translucence"> #99000000</color>
+    <color name="black21"> #212628</color>
+    <color name="black24"> #242D30</color>
+    <color name="black26"> #262626</color>
+    <color name="black2"> #C0BEBF</color>
+    <color name="blackcc"> #cccccc</color>
+    <color name="blackb2b2"> #b2b2b2</color>
+    <color name="white">#ffffff</color>
+    <color name="ff0025">#ff0025</color>
+    <color name="white1">#fe7535</color>
+    <color name="FB613F">#FB613F</color>
+    <color name="title6767">#676767</color>
+    <color name="eeee">#eeeeee</color>
+    <color name="e5e5e5">#e5e5e5</color>
+    <color name="e1e1">#e1e1e1</color>
+
+    <color name="white_pressed">#ffd5d5d5</color>
+    <color name="white_dc">#dcdcdc</color>
+    <color name="d7d7d7">#d7d7d7</color>
+    <color name="d4">#D4D4D4</color>
+    <color name="white_pressed2">#FAFAFA</color>
+    <color name="F45137">#F45137</color>
+    <color name="divider">#f2f2f2</color>
+    <color name="title">#3b3b3b</color>
+    <color name="b3b3b3">#b3b3b3</color>
+    <color name="bfbdbd">#bfbdbd</color>
+    <color name="title2">#333333</color>
+    <color name="tv888484">#888484</color>
+    <color name="hint">#CECECE</color>
+    <color name="refresh_bg">#B3E5FC</color>
+    <color name="divider_color">#e4e4e4</color>
+    <color name="e2e2e2">#e2e2e2</color>
+    <color name="e57304">#e57304</color>
+    <color name="divider_colorf4">#f4f4f4</color>
+    <color name="tab_bg">#f8f8f8</color>
+    <color name="tab_normal">#333333</color>
+    <color name="text666">#666666</color>
+    <color name="gary_text">#999999</color>
+    <color name="gary_text3399">#33999999</color>
+    <color name="transparent1">#808080</color>
+    <color name="transparent">#00000000</color>
+    <color name="btn_enable">#D2D2D2</color>
+    <!--<color name="title_bg">#EFEFEF</color>-->
+    <color name="title_bg">#ffffff</color>
+    <color name="bg_f4">#f4f4f4</color>
+<color name="text2">#AAAAAA</color>
+<color name="tv9696">#969696</color>
+<color name="text3">#A9A9A9</color>
+    <color name="item_title_text">#585858</color>
+    <color name="orange">#FB380A</color>
+    <color name="orange2">#F26841</color>
+    <color name="orange3">#FEE9E5</color>
+    <color name="orange4">#F8710b</color>
+    <color name="orange5">#F16240</color>
+    <color name="orange6">#F06440</color>
+    <color name="btn_color">@color/theme</color>
+    <color name="text_bg1791E9">#1791E9</color>
+
+
+
+    <color name="ed">#ededed</color>
+    <color name="E6E4E4">#E6E4E4</color>
+    <color name="E6E6E6">#E6E6E6</color>
+</resources>

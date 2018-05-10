@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner">
+        <attr name="isLoop" format="boolean" />
+        <attr name="isAotuLoop" format="boolean" />
+        <attr name="point_radiu" format="dimension" />
+        <attr name="indicator_type" format="enum">
+            <enum name="indicator_default" value="0"/>
+            <enum name="indicator_circle" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

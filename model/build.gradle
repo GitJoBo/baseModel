@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+def cfg = rootProject.ext.configuration
+android {
+    compileSdkVersion cfg.compileSdkVersion
+//    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+//        jackOptions {
+//            enabled true
+//        }
+
+        ndk{
+//            moduleName "JniHelper"
+//            添加需要支持的lib包
+//            ldLibs("log")
+//            指定编译出所需的平台：
+            abiFilters("armeabi", "armeabi-v7a","x86")
+//            STL支持：
+            stl = "system"  // STL目前可支持 system（系统默认的最小支持的C++运行时库）；stlport_static（以静态链接的方式使用stlport版本的STL）；stlport_shared（以动态链接的方式使用stlport版本的STL）；gnustl_static（以静态链接的方式使用gnu版本的STL）
+//            cFlags标记：
+//            cFlags("-std=c++11")
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    sourceSets.main{
+        jniLibs.srcDirs 'libs'
+    }
+
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+//    dependencies {
+//        classpath 'me.tatarka:gradle-retrolambda:3.3.1'
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //    rx
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //    compile 'com.facebook.stetho:stetho:1.3.1'
+    //    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    compile 'com.orhanobut:logger:1.15'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.8.0'
+}
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
